@@ -159,6 +159,11 @@ class ContainerViewController : UIViewController, UIScrollViewDelegate {
         let progress = self.containerScrollView.contentOffset.y / topHeight
         self.delegate?.tp_scrollView(self.containerScrollView, didUpdate: progress)
     }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        self.delegate.tp_scrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
+    }
+    
 }
 
 //MARK: BottomPageDelegate

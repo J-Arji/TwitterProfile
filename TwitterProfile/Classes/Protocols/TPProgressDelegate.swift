@@ -11,4 +11,5 @@ import UIKit
 public protocol TPProgressDelegate: class{
     func tp_scrollView(_ scrollView: UIScrollView, didUpdate progress: CGFloat)
     func tp_scrollViewDidLoad(_ scrollView: UIScrollView)
+    func tp_scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
 }
