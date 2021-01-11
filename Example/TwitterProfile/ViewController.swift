@@ -10,6 +10,7 @@ import UIKit
 import TwitterProfile
 
 class ViewController : UIViewController, UIScrollViewDelegate, TPDataSource, TPProgressDelegate {
+   
     
     var headerVC: HeaderViewController?
     
@@ -73,4 +74,9 @@ class ViewController : UIViewController, UIScrollViewDelegate, TPDataSource, TPP
         scrollView.addSubview(refreshView)
         refreshView.addSubview(refresh)
     }
+    
+    func tp_scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        print(targetContentOffset)
+    }
+    
 }
